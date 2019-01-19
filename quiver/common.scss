@@ -2,21 +2,25 @@ html {
   --code-font: 'Dank Mono';
   --code-word-color: #e74072;
   --base-font-size: 16px;
-  --base-font-size-retina: 16px;
   --heading-color: #009bc7;
+  --font-smooth: subpixel-antialised;
+
+  // Retina displays
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    --font-smooth: antialiased;
+    --base-font-size: 16px;
+  }
+}
+
+body {
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: var(--font-smooth);
 }
 
 // Main font size
 #contentarea,
 .ace_editor {
-  // Non-retina displays
   font-size: var(--base-font-size);
-
-  // Retina displays
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    -webkit-font-smoothing: antialiased;
-    font-size: var(--base-font-size-retina);
-  }
 }
 
 // HEADERS
@@ -105,15 +109,14 @@ h5 {
   }
 }
 
-// CODE CELL
-.code-cell {
-  .editor {
-    font-family: var(--code-font);
-
-    border-color: #aaa;
-    border-style: dashed;
-    border-width: 1px 0;
-    background-color: #f5f5f5;
-    padding: 5px 0 !important;
-  }
+.markdown-cell .ace_static_highlight,
+.code-cell .ace_static_highlight,
+.code-cell .editor {
+  font-family: var(--code-font);
+  font-size: var(--base-font-size);
+  border-color: #aaa;
+  border-style: dashed;
+  border-width: 1px 0;
+  background-color: #f9f9f9;
+  padding: 5px 0 !important;
 }
