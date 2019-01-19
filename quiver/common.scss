@@ -1,4 +1,119 @@
+html {
+  --code-font: 'Dank Mono';
+  --code-word-color: #e74072;
+  --base-font-size: 16px;
+  --base-font-size-retina: 14px;
+  --heading-color: #009bc7;
+}
+
+// Main font size
 #contentarea,
 .ace_editor {
-  font-size: 16px;
+  // Non-retina displays
+  font-size: var(--base-font-size);
+
+  // Retina displays
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    -webkit-font-smoothing: antialiased;
+    font-size: var(--base-font-size-retina);
+  }
+}
+
+// HEADERS
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+  color: var(--heading-color);
+  margin-top: 2em;
+}
+h1 {
+  font-size: 1.9em;
+}
+h2 {
+  font-size: 1.7em;
+}
+h3,
+h4,
+h5 {
+  font-size: 1.2em;
+}
+
+// MARKDOWN CELL
+
+.markdown-cell {
+  .ace_editor {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.5;
+    font-family: var(--code-font);
+  }
+
+  /* Headings */
+  .ace_heading.ace_1,
+  .ace_heading.ace_1 ~ .ace_heading,
+  .ace_heading.ace_2,
+  .ace_heading.ace_2 ~ .ace_heading,
+  .ace_heading.ace_3,
+  .ace_heading.ace_3 ~ .ace_heading,
+  .ace_heading.ace_4,
+  .ace_heading.ace_4 ~ .ace_heading,
+  .ace_heading.ace_5,
+  .ace_heading.ace_5 ~ .ace_heading,
+  .ace_heading.ace_6,
+  .ace_heading.ace_6 ~ .ace_heading {
+    color: var(--heading-color);
+    text-decoration: underline;
+  }
+
+  .ace_support.ace_function {
+    color: var(--code-word-color);
+  }
+
+  /* ordered list, unordered list */
+  .ace_list {
+    color: #6c6c6c;
+  }
+
+  /* blockquote */
+  .ace_blockquote {
+    color: #a1b1c1;
+  }
+
+  /* _emphasis_ */
+  .ace_emphasis {
+    color: #2f4e8e;
+    font-style: italic;
+  }
+
+  /* **strong** */
+  .ace_strong {
+    color: #000;
+    background-color: #efefef;
+  }
+}
+
+// TEXT CELL
+.text-cell {
+  code {
+    color: #f92571;
+    background: none;
+    font-weight: normal;
+    font-family: var(--code-font);
+  }
+}
+
+// CODE CELL
+.code-cell {
+  .editor {
+    font-family: var(--code-font);
+
+    border-color: #aaa;
+    border-style: dashed;
+    border-width: 1px 0;
+    background-color: #f5f5f5;
+    padding: 5px 0 !important;
+  }
 }
