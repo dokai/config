@@ -88,8 +88,9 @@ h5 {
     background-color: #efefef; }
 
 /* line 100, common.scss */
+.markdown-cell code,
 .text-cell code {
-  color: #f92571;
+  color: var(--code-word-color);
   background: none;
   font-weight: normal;
   font-family: var(--code-font); }

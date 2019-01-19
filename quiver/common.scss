@@ -95,10 +95,10 @@ h5 {
   }
 }
 
-// TEXT CELL
+.markdown-cell,
 .text-cell {
   code {
-    color: #f92571;
+    color: var(--code-word-color);
     background: none;
     font-weight: normal;
     font-family: var(--code-font);
