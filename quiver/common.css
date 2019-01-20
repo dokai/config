@@ -1,27 +1,31 @@
 /* line 1, common.scss */
 html {
+  --base-font: 'Charter';
+  --base-font-size: 16px;
   --code-font: 'Dank Mono';
   --code-word-color: #e74072;
-  --base-font-size: 16px;
+  --code-font-size: 14px;
   --heading-color: #009bc7;
   --font-smooth: subpixel-antialised; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     /* line 1, common.scss */
     html {
       --font-smooth: antialiased;
-      --base-font-size: 16px; } }
+      --base-font-size: 16px;
+      --code-font-size: 14px; } }
 
-/* line 15, common.scss */
+/* line 18, common.scss */
 body {
+  font-family: var(--base-font);
   font-size: var(--base-font-size);
   -webkit-font-smoothing: var(--font-smooth); }
 
-/* line 21, common.scss */
+/* line 25, common.scss */
 #contentarea,
 .ace_editor {
   font-size: var(--base-font-size); }
 
-/* line 27, common.scss */
+/* line 31, common.scss */
 h1,
 h2,
 h3,
@@ -29,36 +33,43 @@ h4,
 h5 {
   text-transform: uppercase;
   color: var(--heading-color);
-  margin-top: 2em; }
+  margin-top: 1.6em; }
 
-/* line 36, common.scss */
+/* line 40, common.scss */
 h1 {
-  font-size: 1.9em; }
+  font-size: 1.6em; }
 
-/* line 39, common.scss */
+/* line 43, common.scss */
 h2 {
-  font-size: 1.7em; }
+  font-size: 1.5em; }
 
-/* line 42, common.scss */
-h3,
-h4,
+/* line 46, common.scss */
+h3 {
+  font-size: 1.4em; }
+
+/* line 49, common.scss */
+h4 {
+  font-size: 1.3em; }
+
+/* line 52, common.scss */
 h5 {
   font-size: 1.2em; }
 
-/* line 50, common.scss */
+/* line 58, common.scss */
 .markdown-cell {
   /* Headings */
   /* ordered list, unordered list */
   /* blockquote */
   /* _emphasis_ */
   /* **strong** */ }
-  /* line 51, common.scss */
+  /* line 59, common.scss */
   .markdown-cell .ace_editor {
     background-color: #ffffff;
     color: #333;
     line-height: 1.5;
-    font-family: var(--code-font); }
-  /* line 59, common.scss */
+    font-family: var(--code-font);
+    font-size: var(--code-font-size); }
+  /* line 68, common.scss */
   .markdown-cell .ace_heading.ace_1,
   .markdown-cell .ace_heading.ace_1 ~ .ace_heading,
   .markdown-cell .ace_heading.ace_2,
@@ -73,38 +84,39 @@ h5 {
   .markdown-cell .ace_heading.ace_6 ~ .ace_heading {
     color: var(--heading-color);
     text-decoration: underline; }
-  /* line 75, common.scss */
+  /* line 84, common.scss */
   .markdown-cell .ace_support.ace_function {
     color: var(--code-word-color); }
-  /* line 80, common.scss */
+  /* line 89, common.scss */
   .markdown-cell .ace_list {
     color: #6c6c6c; }
-  /* line 85, common.scss */
+  /* line 94, common.scss */
   .markdown-cell .ace_blockquote {
     color: #a1b1c1; }
-  /* line 90, common.scss */
+  /* line 99, common.scss */
   .markdown-cell .ace_emphasis {
     color: #2f4e8e;
     font-style: italic; }
-  /* line 96, common.scss */
+  /* line 105, common.scss */
   .markdown-cell .ace_strong {
     color: #000;
     background-color: #efefef; }
 
-/* line 104, common.scss */
+/* line 113, common.scss */
 .markdown-cell code,
 .text-cell code {
   color: var(--code-word-color);
   background: none;
   font-weight: normal;
-  font-family: var(--code-font); }
+  font-family: var(--code-font);
+  font-size: var(--code-font-size); }
 
-/* line 112, common.scss */
+/* line 122, common.scss */
 .markdown-cell .ace_static_highlight,
 .code-cell .ace_static_highlight,
 .code-cell .editor {
   font-family: var(--code-font);
-  font-size: var(--base-font-size);
+  font-size: var(--code-font-size);
   border-color: #aaa;
   border-style: dashed;
   border-width: 1px 0;

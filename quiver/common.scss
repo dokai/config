@@ -1,7 +1,9 @@
 html {
+  --base-font: 'Charter';
+  --base-font-size: 16px;
   --code-font: 'Dank Mono';
   --code-word-color: #e74072;
-  --base-font-size: 16px;
+  --code-font-size: 14px;
   --heading-color: #009bc7;
   --font-smooth: subpixel-antialised;
 
@@ -9,10 +11,12 @@ html {
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     --font-smooth: antialiased;
     --base-font-size: 16px;
+    --code-font-size: 14px;
   }
 }
 
 body {
+  font-family: var(--base-font);
   font-size: var(--base-font-size);
   -webkit-font-smoothing: var(--font-smooth);
 }
@@ -31,16 +35,20 @@ h4,
 h5 {
   text-transform: uppercase;
   color: var(--heading-color);
-  margin-top: 2em;
+  margin-top: 1.6em;
 }
 h1 {
-  font-size: 1.9em;
+  font-size: 1.6em;
 }
 h2 {
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
-h3,
-h4,
+h3 {
+  font-size: 1.4em;
+}
+h4 {
+  font-size: 1.3em;
+}
 h5 {
   font-size: 1.2em;
 }
@@ -53,6 +61,7 @@ h5 {
     color: #333;
     line-height: 1.5;
     font-family: var(--code-font);
+    font-size: var(--code-font-size);
   }
 
   /* Headings */
@@ -106,6 +115,7 @@ h5 {
     background: none;
     font-weight: normal;
     font-family: var(--code-font);
+    font-size: var(--code-font-size);
   }
 }
 
@@ -113,7 +123,7 @@ h5 {
 .code-cell .ace_static_highlight,
 .code-cell .editor {
   font-family: var(--code-font);
-  font-size: var(--base-font-size);
+  font-size: var(--code-font-size);
   border-color: #aaa;
   border-style: dashed;
   border-width: 1px 0;
