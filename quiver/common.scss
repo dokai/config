@@ -28,17 +28,18 @@ body {
 }
 
 // HEADERS
-h1,
 h2,
 h3,
 h4,
 h5 {
-  text-transform: uppercase;
-  color: var(--heading-color);
-  margin-top: 1.6em;
+  margin-top: 1.3em;
+  color: #666;
 }
 h1 {
+  text-transform: uppercase;
+  color: var(--heading-color);
   font-size: 1.6em;
+  margin-top: 1.6em;
 }
 h2 {
   font-size: 1.5em;

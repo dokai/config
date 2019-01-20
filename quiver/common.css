@@ -26,50 +26,51 @@ body {
   font-size: var(--base-font-size); }
 
 /* line 31, common.scss */
-h1,
 h2,
 h3,
 h4,
 h5 {
+  margin-top: 1.3em;
+  color: #666; }
+
+/* line 38, common.scss */
+h1 {
   text-transform: uppercase;
   color: var(--heading-color);
+  font-size: 1.6em;
   margin-top: 1.6em; }
 
-/* line 40, common.scss */
-h1 {
-  font-size: 1.6em; }
-
-/* line 43, common.scss */
+/* line 44, common.scss */
 h2 {
   font-size: 1.5em; }
 
-/* line 46, common.scss */
+/* line 47, common.scss */
 h3 {
   font-size: 1.4em; }
 
-/* line 49, common.scss */
+/* line 50, common.scss */
 h4 {
   font-size: 1.3em; }
 
-/* line 52, common.scss */
+/* line 53, common.scss */
 h5 {
   font-size: 1.2em; }
 
-/* line 58, common.scss */
+/* line 59, common.scss */
 .markdown-cell {
   /* Headings */
   /* ordered list, unordered list */
   /* blockquote */
   /* _emphasis_ */
   /* **strong** */ }
-  /* line 59, common.scss */
+  /* line 60, common.scss */
   .markdown-cell .ace_editor {
     background-color: #ffffff;
     color: #333;
     line-height: 1.5;
     font-family: var(--code-font);
     font-size: var(--code-font-size); }
-  /* line 68, common.scss */
+  /* line 69, common.scss */
   .markdown-cell .ace_heading.ace_1,
   .markdown-cell .ace_heading.ace_1 ~ .ace_heading,
   .markdown-cell .ace_heading.ace_2,
@@ -84,25 +85,25 @@ h5 {
   .markdown-cell .ace_heading.ace_6 ~ .ace_heading {
     color: var(--heading-color);
     text-decoration: underline; }
-  /* line 84, common.scss */
+  /* line 85, common.scss */
   .markdown-cell .ace_support.ace_function {
     color: var(--code-word-color); }
-  /* line 89, common.scss */
+  /* line 90, common.scss */
   .markdown-cell .ace_list {
     color: #6c6c6c; }
-  /* line 94, common.scss */
+  /* line 95, common.scss */
   .markdown-cell .ace_blockquote {
     color: #a1b1c1; }
-  /* line 99, common.scss */
+  /* line 100, common.scss */
   .markdown-cell .ace_emphasis {
     color: #2f4e8e;
     font-style: italic; }
-  /* line 105, common.scss */
+  /* line 106, common.scss */
   .markdown-cell .ace_strong {
     color: #000;
     background-color: #efefef; }
 
-/* line 113, common.scss */
+/* line 114, common.scss */
 .markdown-cell code,
 .text-cell code {
   color: var(--code-word-color);
@@ -111,7 +112,7 @@ h5 {
   font-family: var(--code-font);
   font-size: var(--code-font-size); }
 
-/* line 122, common.scss */
+/* line 123, common.scss */
 .markdown-cell .ace_static_highlight,
 .code-cell .ace_static_highlight,
 .code-cell .editor {
