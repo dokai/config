@@ -6,6 +6,7 @@ html {
   --code-font-size: 14px;
   --heading-color: #009bc7;
   --font-smooth: subpixel-antialised;
+  --link-color: #335baf;
 
   // Retina displays
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -19,6 +20,10 @@ body {
   font-family: var(--base-font);
   font-size: var(--base-font-size);
   -webkit-font-smoothing: var(--font-smooth);
+}
+
+a {
+  color: var(--link-color);
 }
 
 // Main font size
@@ -35,6 +40,17 @@ h5 {
   margin-top: 1.3em;
   color: #666;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  code {
+    font-size: unset !important;
+  }
+}
+
 h1 {
   text-transform: uppercase;
   color: var(--heading-color);
