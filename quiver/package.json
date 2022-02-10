@@ -6,6 +6,6 @@
     "build": "node-sass --source-comments common.scss -o ."
   },
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^7.0.0"
   }
 }
